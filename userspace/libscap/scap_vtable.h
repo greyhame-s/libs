@@ -31,9 +31,8 @@ typedef struct scap scap_t;
 typedef struct ppm_evt_hdr scap_evt;
 
 enum scap_eventmask_op {
-	SCAP_PPM_SC_MASK_ZERO = 0, //< disable all syscalls
-	SCAP_PPM_SC_MASK_SET = 1, //< enable a syscall
-	SCAP_PPM_SC_MASK_UNSET = 2, //< disable a syscall
+	SCAP_PPM_SC_MASK_SET = 0, //< enable a syscall
+	SCAP_PPM_SC_MASK_UNSET = 1, //< disable a syscall
 };
 
 enum scap_tpmask_op {
