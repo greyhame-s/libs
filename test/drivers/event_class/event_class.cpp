@@ -96,7 +96,7 @@ event_test::~event_test()
 	clear_ring_buffers();
 
 	/* 2 - clean all interesting syscalls. */
-	scap_clear_ppm_sc_mask(s_scap_handle);
+	clear_ppm_sc_mask();
 }
 
 /* This constructor must be used with generic tracepoints
@@ -196,7 +196,7 @@ void event_test::enable_capture()
 	{
 		if(m_tp_set[i])
 		{
-			scap_set_tpmask(s_scap_handle, i, true);
+			scap_set_tp(s_scap_handle, i, true);
 		}
 	}
 	/* We need to clear all the `ring-buffers` because maybe during
